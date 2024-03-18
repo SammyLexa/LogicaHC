@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>1. Escreva um programa em que o usuário informe dois números utilizando o "prompt". Então escreva em tela o maior
+        deles.</p>
+    <script>
+
+        //var numero1 = prompt("digite o primeiro número: ")
+        //var numero2 = prompt("Digite o segundo número: ")
+
+        //if (numero1 > numero2) {
+        //alert("O número " + numero1 + " é o maior");
+        //}
+        //if (numero2 > numero1) {
+        //alert("O número " + numero2 + " é o maior");
+        //}
+
+    </script>
+    <p>2. Faça um programa que leia um valor informado pelo usuário e diga se o valor informado é positivo, negativo ou
+        zero.</p>
+    <script>
+        var numero = prompt("digite o número: ")
+
+        if (numero < 0) {
+            alert("O número é negativo")
+        }
+        if (numero > 0) {
+            alert("O número é positivo")
+        }
+        if (numero == 0) {
+            alert("O número é 0")
+        }
+    </script>
+    <p>3. Faça um programa para ler 3 valores (considere que não serão informados valores iguais) e escrever o maior
+        deles.</p>
+    <script>
+        var numero_primeiro = prompt("digite o primeiro número: ")
+        var numero_segundo = prompt("Digite o segundo número: ")
+        var numero_terceiro = prompt("Digite o terceiro número: ")
+
+        if (numero_primeiro > numero_segundo && numero_primeiro > numero_terceiro) {
+            alert("O maior número é: " + numero_primeiro)
+        }
+        if (numero_segundo > numero_primeiro && numero_segundo > numero_terceiro) {
+            alert("O maior número é: " + numero_segundo)
+        }
+        if (numero_terceiro > numero_primeiro && numero_terceiro > numero_segundo) {
+            alert("O maior número é: " + numero_terceiro)
+        }
+    </script>
+    <p>4. Faça um programa que leia 3 valores informados pelo usuário (considere que não serão informados valores
+        iguais) e escrever a soma dos 2 maiores.</p>
+    <script>
+        var numero_01 = parseInt(prompt("Digite o primeiro valor: "))
+        var numero_02 = parseInt(prompt("Digite o segundo valor: "))
+        var numero_03 = parseInt(prompt("Digite o terceiro valor: "))
+        var maior1 = 0;
+        var maior2 = 0;
+
+        if (numero_01 > numero_02 && numero_01 > numero_03) {
+            maior1 = numero_01
+            if (numero_02 > numero_03) {
+                maior2 = numero_02
+            } else {
+                maior2 = numero_03
+            }
+        }
+        if (numero_02 > numero_01 && numero_02 > numero_03) {
+            maior1 = numero_02
+            if (numero_01 > numero_03) {
+                maior2 = numero_01
+            } else {
+                maior2 = numero_03
+            }
+        }
+        if (numero_03 > numero_02 && numero_03 > numero_01) {
+            maior1 = numero_03
+            if (numero_01 > numero_02) {
+                maior2 = numero_01
+            } else {
+                maior2 = numero_02
+            }
+        }
+
+        var soma = Number(maior1) + Number(maior2)
+
+        alert("A soma dos dois maiores números é: " + soma)
+    </script>
+    <p>5.  Faça um programa que leia 6 valores informados pelo usuário, calcule, exiba os números informados e escreva a média aritmética desses valores lidos.</p>
+    <script>
+        var num1 = parseInt(prompt("Digite o primeiro valor: "))
+        var num2 = parseInt(prompt("Digite o segundo valor: "))
+        var num3 = parseInt(prompt("Digite o terceiro valor: "))
+        var num4 = parseInt(prompt("Digite o quarto valor: "))
+        var num5 = parseInt(prompt("Digite o quinto valor: "))
+        var num6 = parseInt(prompt("Digite o sexto valor: "))
+
+        var media = (num1 + num2 + num3 + num4 + num5 + num6) / 6
+
+        alert("A media aritmedica e: " + media)
+    </script>
+    <p>6. Faça um programa que receba quatro valores informados pelo usuário, mas informe somente o primeiro, o último e
+        o maior de todos eles (considere que todos os números informados serão diferentes)
+    </p>
+    <script>
+        var num1 = prompt("Digite o primeiro valor: ")
+        var num2 = prompt("Digite o segundo valor: ")
+        var num3 = prompt("Digite o terceiro valor: ")
+        var num4 = prompt("Digite o quarto valor: ")
+
+        alert("O " + num1 + " (primeiro valor) e o primeiro numero")
+        alert("O " + num4 + " (quarto valor) e o ultimo numero")
+        console.log("O " + num1 + " (primeiro valor) e o primeiro numero")
+        console.log("O " + num4 + " (quarto valor) e o ultimo numero")
+
+        if (num1 > num2 && num1 > num3 && num1 > num4) {
+            alert("O " + num1 + " (primeiro valor) e o maior numero")
+            console.log("O " + num1 + " (primeiro valor) e o maior numero")
+        }
+        if (num2 > num1 && num2 > num3 && num2 > num4) {
+            alert("O " + num2 + " (segundo valor) e o maior numero")
+            console.log("O " + num2 + " (segundo valor) e o maior numero")
+        }
+        if (num3 > num1 && num3 > num2 && num3 > num4) {
+            alert("O " + num3 + " (terceiro valor) e o maior numero")
+            console.log("O " + num3 + " (terceiro valor) e o maior numero")
+        }
+        if (num4 > num1 && num4 > num2 && num4 > num3) {
+            alert("O " + num4 + " (quarto valor) e o maior numero")
+            console.log("O " + num4 + " (quarto valor) e o maior numero")
+        }
+
+        alert("Abra o console para uma melhor visualizacao")
+    </script>
+    <p>7. Faça um programa que leia 6 números que o usuário vai informar. Todos os números lidos com valor inferior a 72
+        devem ser somados. Escreva o valor final da soma efetuada e também todos valores que o usuário informou.</p>
+    <script>
+        var soma = 0;
+
+        var num1 = parseInt(prompt("Digite o primeiro valor: "))
+        if (num1 < 72) {
+            soma += num1
+        }
+        var num2 = parseInt(prompt("Digite o segundo valor: "))
+        if (num2 < 72) {
+            soma += num2
+        }
+        var num3 = parseInt(prompt("Digite o terceiro valor: "))
+        if (num3 < 72) {
+            soma += num3
+        }
+        var num4 = parseInt(prompt("Digite o quarto valor: "))
+        if (num4 < 72) {
+            soma += num4
+        }
+        var num5 = parseInt(prompt("Digite o quinto valor: "))
+        if (num5 < 72) {
+            soma += num5
+        }
+        var num6 = parseInt(prompt("Digite o sexto valor: "))
+        if (num6 < 72) {
+            soma += num6
+        }
+
+        alert("A soma de todos os valores resultou em: " + soma)
+        alert("Primeiro valor: " + num1 + "\n" + "Segundo valor: " + num2 + "\n" + "Terceiro valor: " + num3 + "\n" +
+            "Quarto valor: " + num4 + "\n" + "Quinto valor: " + num5 + "\n" + "Sexto valor: " + num6 + "\n")
+
+        console.log("A soma de todos os valores resultou em: " + soma)
+        console.log("Primeiro valor: " + num1 + "\n" + "Segundo valor: " + num2 + "\n" + "Terceiro valor: " + num3 + "\n" +
+            "Quarto valor: " + num4 + "\n" + "Quinto valor: " + num5 + "\n" + "Sexto valor: " + num6 + "\n")
+    </script>
+    <p>8. Escreva um programa que calcule a média de quatro números informados pelo usuário, mas somente se esses
+        números forem maiores que 0 e menores que 10. No final, se a média for maior que cinco o usuário receberá uma
+        mensagem "Você passou no teste". Em qualquer outra situação, ele receberá uma mensagem de "tente novamente"</p>
+    <script>
+        var media = parseInt(0)
+        var divisao = parseInt(0)
+
+        var num1 = parseInt(prompt("Digite o primeiro valor: "))
+        if (num1 > 0 && num1 <= 10) {
+            media += num1
+            divisao++
+        }
+        var num2 = parseInt(prompt("Digite o segundo valor: "))
+        if (num2 > 0 && num2 <= 10) {
+            media += num2
+            divisao++
+        }
+        var num3 = parseInt(prompt("Digite o terceiro valor: "))
+        if (num3 > 0 && num3 <= 10) {
+            media += num3
+            divisao++
+        }
+        var num4 = parseInt(prompt("Digite o quarto valor: "))
+        if (num4 > 0 && num4 <= 10) {
+            media += num4
+            divisao++
+        }
+
+        var resultado = media / divisao
+
+        if (resultado >= 5) {
+            alert("A sua nota foi: " + resultado + "\n" + "Voce passou no teste")
+        } else {
+            alert("A sua nota foi: " + resultado + "\n" + "Voce reprovou no teste")
+        }
+    </script>
+    <p>9. Escreva um programa para ler o ano de nascimento de uma pessoa e escrever uma mensagem que diga se ela poderá
+        ou não votar este ano (não é necessário considerar o mês em que ela nasceu).</p>
+    <script>
+        var ano = parseInt(prompt("Digite o seu ano de nascimento: "))
+
+        if (ano <= 2008) {
+            alert("Voce pode votar esse ano!")
+            console.log("Voce pode votar esse ano!")
+        }
+        if (ano > 2008) {
+            alert("Voce nao pode votar esse ano!")
+            console.log("Voce nao pode votar esse ano!")
+        }
+    </script>
+    <p>10. Tendo como entrada a altura e o sexo (codificado da seguinte forma: 1: feminino 2: masculino) de uma pessoa,
+        construa um programa que calcule e imprima seu peso ideal, utilizando as seguintes fórmulas:</p>
+    <script>
+        var genero = parseInt(prompt("Digite seu genero: " + "\n" + "Feminino: 1" + "\n" + "Masculino: 2"))
+
+        var altura = parseFloat(prompt("Digite sua altura em cm: " + "\n" + "Exemplo: 1.70"))
+
+        var pesoIdealF = (62.1 * altura) - 44.7
+        var pesoIdealM = (72.7 * altura) - 58
+
+        if (genero == 1) {
+            alert("Peso Ideal para sua altura: " + pesoIdealF)
+        }
+        if (genero == 2) {
+            alert("Peso Ideal para sua altura: " + pesoIdealM)
+        }
+    </script>
+    <p>11. Uma micro calculadora
+        Escreva um programa para ler 2 valores inteiros informados pelo usuário e uma das seguintes operações a serem
+        executadas (codificada da seguinte forma: 1. Adição, 2. Subtração, 3. Divisão, 4. Multiplicação).
+        O programa deve calcular e escrever o resultado dessa operação sobre os dois valores lidos.
+
+        Observação: Considere que só serão lidos os valores 1, 2, 3 ou 4 para as operações</p>
+    <script>
+        var operacao = parseInt(prompt("Digite a operacao desejada: " + "\n" + "Adicao: 1" + "\n" + "Subtracao: 2"
+            + "\n" + "Divisao: 3" + "\n" + "Multiplicacao: 4"))
+
+        if (operacao > 4 || operacao < 1) {
+            alert("Operacao inexistente")
+            console.log("Operacao inexistente")
+        }
+        else {
+            var num1 = parseFloat(prompt("Digite o primeiro valor: "))
+            var num2 = parseFloat(prompt("Digite o segundo valor: "))
+
+            var soma = num1 + num2
+            var sub = num1 - num2
+            var div = num1 / num2
+            var multi = num1 * num2
+
+            if (operacao == 1) {
+                alert("O resultado foi: " + soma)
+                console.log("O resultado foi: " + soma)
+            }
+            if (operacao == 2) {
+                alert("O resultado foi: " + sub)
+                console.log("O resultado foi: " + sub)
+            }
+            if (operacao == 3) {
+                alert("O resultado foi: " + div)
+                console.log("O resultado foi: " + div)
+            }
+            if (operacao == 4) {
+                alert("O resultado foi: " + multi)
+                console.log("O resultado foi: " + multi)
+            }
+
+        }
+    </script>
+</body>
+
+</html>
