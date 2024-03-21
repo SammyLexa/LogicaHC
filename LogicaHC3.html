@@ -1,12 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    <p>2 - Crie uma bomba relógio (usando somente código - para deixar claro!) cuja contagem regressiva vá de 30 a 0. Utilize "document.write" para escrever em tela e no final da repetição escreva "EXPLOSÃO".</p>
+    <p>1 - Escreva um algoritmo para ler 2 valores informados pelo usuário e se o segundo valor informado for igual ou
+        menor que ZERO, deve ser lido um novo valor. Ou seja, para o segundo valor não pode ser aceito o valor zero, nem
+        um valor negativo. O seu programa deve imprimir o resultado da divisão do primeiro valor lido pelo segundo
+        valor.</p>
+    <script>
+
+        var loop = true
+
+        var num1 = parseInt(prompt("Digite o primeiro valor: "))
+        var num2 = parseInt(prompt("Digite o segundo valor: "))
+        while (num2 <= 0 && loop == true) {
+            var num2 = parseInt(prompt("Digite o segundo valor: "))
+            if (num2 >= 1) {
+                loop = false
+            }
+        }
+
+        var resultado = num1 / num2
+
+        alert("O resultado e: " + resultado)
+        console.log("O resultado e: " + resultado)
+
+    </script> -->
+
+    <!-- <p>2 - Crie uma bomba relógio (usando somente código - para deixar claro!) cuja contagem regressiva vá de 30 a 0. Utilize "document.write" para escrever em tela e no final da repetição escreva "EXPLOSÃO".</p>
     <script>
 
         var contagem = 30
@@ -26,6 +52,99 @@
             numero--;
         }
 
+    </script> -->
+    <!-- <p>
+        4 - Faça um algoritmo que calcule e escreva a média aritmética dos números inteiros entre 15 (inclusive) e 100
+        (inclusive).
+    </p> -->
+    <!-- <script>
+        var soma = 0;
+
+        for (var i = 15; i <= 100; i++) {
+            document.write(" " + i)
+            soma += parseInt(i)
+        }
+
+        var divisao = soma / (100 - 85)
+
+        alert(divisao)
+    </script>
+    <p>
+        5 - Faça um algoritmo que calcule e escreva a média aritmética dos dois números inteiros informados pelo usuário
+        e todos os números inteiros entre eles. Considere que o primeiro sempre será menor que o segundo.
+    </p>
+    <script>
+            var num1 = parseInt(prompt("Digite o primeiro numero: "))
+            var num2 = parseInt(prompt("Digite o segundo numero: "))
+
+            if (num1 < num2) {
+                var media = (num1 + num2) / 2
+            }
+            alert("A media aritmedica dos dois números informados é: " + media)
+        </script>
+    <p>6 - Escreva um programa para ler 2 notas de um aluno, calcular e imprimir a média final. Considere que a nota de
+        aprovação é 9,5. Logo após escrever a mensagem "Calcular a média de outro aluno Sim/Não?" e solicitar um
+        resposta. Se a resposta for "S", o programa deve ser executado novamente, caso contrário deve ser encerrado
+        exibindo a quantidade de alunos aprovados.</p>
+    <script>
+        var loop = true
+
+        while (loop == true) {
+            var num1 = parseFloat(prompt("Digite o primeiro numero: "))
+            var num2 = parseFloat(prompt("Digite o segundo numero: "))
+            var media = (num1 + num2) / 2
+
+            if (media >= 9.5) {
+                alert("Aprovado")
+            }
+            if (media < 9.5) {
+                alert("Reprovado")
+            }
+
+            var continuar = prompt("Continuar? S ou N: ")
+
+            if (continuar == "S" || continuar == "s") {
+                loop = true
+            } else if (continuar == "N" || continuar == "n") {
+                loop = false
+            } else {
+                alert("Comando Errado")
+            }
+        }
+    </script>
+    <P>
+        7 - Escreva um algoritmo para ler as notas de avaliações de um aluno, calcule e imprima a média (simples) desse
+        aluno. Só devem ser aceitos valores válidos durante a leitura (0 a 10) para cada nota. São 6 notas ao total.
+        Caso o valor informado para qualquer uma das notas esteja fora do limite estabelecido, deve ser solicitado um
+        novo valor ao usuário.
+    </P>
+
+    <P>8 - Ler um valor N e imprimir todos os valores inteiros entre 1 (inclusive) e N (inclusive). Considere que o N
+        será sempre maior que ZERO.
+        N é um valor informado pelo usuário</P>
+
+    <p>
+        11 - Escreva um programa em que o usuário informe 10 valores e escreva quantos desses valores lidos estão entre
+        os números 24 e 42 (incluindo os valores 24 e 42) e quantos deles estão fora deste intervalo.
+    </p>
+    <script>
+        var entre = 0
+        var fora = 0
+
+        for (var i = 1; i <= 10; i++) {
+
+            var num = {}
+
+            num[i] = parseFloat(prompt("Digite o " + [i] + " numero: "))
+            if (num[i] >= 24 && num[i] <= 42) {
+                entre++
+            } else {
+                fora++
+            }
+        }
+
+        alert(entre + " numeros estao entre 24 e 42" + "\n" + fora + " numeros nao estao entre 24 e 42")
     </script>
 </body>
+
 </html>
