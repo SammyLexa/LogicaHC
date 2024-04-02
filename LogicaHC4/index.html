@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hora de Codar 4</title>
+</head>
+
+<body>
+    <!-- <P>1
+        Crie um programa onde o usuário possa cadastrar estudantes sem limites, e, em seguida, Se o usuário digitar "PARE" o programa deve exibir a quantidade de estudantes cadastrados e a lista com cada um deles. </P>
+    <script>
+        const alunos = [] //Criando a contante array alunos, vazia e fora do while pra ser acessada globalmente
+        while (true) {
+           var aluno = prompt("Digite o nome do Aluno para registrar:") //Armazena na variavel aluno os nomes digitados pelo comando prompt
+        if (aluno == "pare") { //foi criado o if para a verificação, se o usuario digitar "pare" o laço fecha em break e para de ser pedido os nomes de alunos.
+            break;
+        }
+        alunos.push(aluno) // adiciona na array alunos com o metodo .push 
+        }
+
+        alert(alunos + " quantidade de alunos cadastrados: " + alunos.length) //exibe todos os alunos
+    </script> -->
+    <!-- <p>2
+        Crie uma array de planetas que inclua "Terra", "Marte", "Plutão", "Vênus", "Júpiter", "Saturno" e, em seguida,
+        peça ao usuário para digitar o nome de um planeta.
+
+        Verifique se o planeta que o usuário informou está na array e informe ao usuário.</p>
+    <script>
+        const planetas = ["Terra", "Marte", "Plutão", "Vênus", "Júpiter", "Saturno"];
+
+        var planeta = prompt("Digite o Planeta:") 
+        if (planetas.includes(planeta)) {   //.includes verifica se o item digitado está presente no array
+            alert("O planeta está no array")
+        } else {
+            alert("O planeta não está no array")
+        }
+
+    </script> -->
+    <p>3
+        Vamos criar uma lista de compras.
+
+        Crie uma array de frutas, exiba-a ao usuário e, em seguida, peça ao usuário para digitar o nome de uma das
+        frutas.
+
+        Caso a fruta esteja no array, remova-a e exiba a mensagem "Fruta foi retirada da lista".
+
+        Peça novamente para o usuário digitar o nome de uma fruta para ser removida.
+
+        Sempre que o usuário procurar por uma fruta que não está no array exiba a mensagem "Fruta indisponível no nosso
+        mercado".
+
+        Quando o array não possuir mais itens dentro de si, escreva "Lista de compras finalizada".</p>
+
+    <script>
+
+        const frutas = ["Banana", "Laranja", "Pessêgo", "Abacaxi", "Limão", "Uva"];
+        alert(frutas);
+
+
+        while (true) {
+
+            var fruta = prompt("Digite a fruta que deseja adicionar a sacola:") //Reecebe as frutas digitadas
+
+            if (frutas.includes(fruta)) { // Valida se a fruta digitada está dentro do array, caso estiver executa o bloco de codigo e remove da array.
+                var numero_Fruta = frutas.indexOf(fruta) //extrai o numero da posição do array da fruta digitada 
+                frutas.splice(numero_Fruta, 1); // tendo a posição numero da fruta digitada, romve da lista
+                alert(frutas);//exibe ao usuario as frutas restantes
+
+                if (frutas.length == 0) {
+                    break; // se não houver mais frutas para o loop do while
+                }
+            } else { // caso a fruta digitada não esteja no array executa o bloco de codigo
+                alert("Fruta indisponível no nosso mercado")
+            }
+
+        }
+
+        alert("Lista de compras finalizada")
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // while (rutas.includes(fruta)) {
+        //     var numero_Fruta = frutas.indexOf(fruta)
+        //     frutas.splice(numero_Fruta, 1);
+        //     alert("Fruta foi retirada da lista" + frutas)
+        //     var fruta = prompt("Digite a fruta que deseja remover:")
+        // }   
+
+
+    </script>
+</body>
+
+</html>
